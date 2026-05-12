@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Course Home Page for Julio Castillo">
+    <meta name="author" content="Julio Castillo">
+
+    <title>WDD 231 | Julio Castillo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site logo" width="70" height="70">
+        <span>Julio Castillo</span>
+        <button id="menu" aria-label="Open navigation"></button>
+    </header>
+
+    <nav id="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Chamber Project</a>
+        <a href="#">Final Project</a>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-card">
+            <h2>About Me</h2>
+            <p>
+                My name is Julio Castillo, and I am currently studying web and software development.
+                I enjoy learning how websites are planned, designed, and built using HTML, CSS, and
+                JavaScript. I am working toward improving my technical skills so I can create useful,
+                modern, and responsive websites. I also enjoy business, technology, and finding ways
+                to use digital tools to solve real problems.
+            </p>
+        </section>
+
+        <section class="photo-card">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpg" alt="Photo of Julio Castillo" width="400" height="400">
+        </section>
+
+        <section class="courses-card">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div id="course-list"></div>
+            <p id="total-credits"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/julio-castillo-574141306/?locale=es" target="_blank" rel="noopener">
+                LinkedIn
+            </a>
+            <a href="https://github.com/juliocesar1113/wdd231.git" target="_blank" rel="noopener">
+                GitHub
+            </a>
+        </div>
+
+        <p>&copy; <span id="currentyear"></span> • Julio Castillo • Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
