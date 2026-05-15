@@ -1,0 +1,28 @@
+{
+  "familyName": "Henderson",
+  "movedInDate": "2024-03-15",
+  "numberOfMembers": 4,
+  "visitedByBishopric": true,
+  "members": [
+    {
+      "name": "Robert Henderson",
+      "gender": "male",
+      "birthdate": "1985-07-22"
+    },
+    {
+      "name": "Laura Henderson",
+      "gender": "female",
+      "birthdate": "1988-11-04"
+    },
+    {
+      "name": "Ethan Henderson",
+      "gender": "male",
+      "birthdate": "2012-02-18"
+    },
+    {
+      "name": "Mia Henderson",
+      "gender": "female",
+      "birthdate": "2015-09-30"
+    }
+  ]
+}
