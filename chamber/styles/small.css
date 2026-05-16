@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --accent: #2563eb;
+  --background: #f1f5f9;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: #111;
+}
+
+header {
+  background-color: var(--white);
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand img {
+  width: 70px;
+  height: auto;
+}
+
+.brand span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "✕";
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary);
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--secondary);
+}
+
+nav a.active {
+  background-color: var(--accent);
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.view-buttons button {
+  padding: 0.7rem 1rem;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#members.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#members.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#members section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+#members img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#members h2 {
+  margin-bottom: 0.5rem;
+}
+
+#members p {
+  margin-bottom: 0.5rem;
+}
+
+#members a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+}

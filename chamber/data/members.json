@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Summit Tech Solutions",
+    "address": "145 State Street, Orem, UT",
+    "phone": "(801) 555-1101",
+    "website": "https://summittech.example",
+    "image": "images/business1.webp",
+    "membership": 3,
+    "description": "Technology consulting and software development services."
+  },
+  {
+    "name": "Blue Mountain Fitness",
+    "address": "89 Canyon Road, Orem, UT",
+    "phone": "(801) 555-2202",
+    "website": "https://bluemountainfit.example",
+    "image": "images/business2.webp",
+    "membership": 2,
+    "description": "Modern fitness center with personal training programs."
+  },
+  {
+    "name": "Wasatch Coffee House",
+    "address": "17 Main Avenue, Orem, UT",
+    "phone": "(801) 555-3303",
+    "website": "https://wasatchcoffee.example",
+    "image": "images/business3.webp",
+    "membership": 1,
+    "description": "Local artisan coffee shop and bakery."
+  },
+  {
+    "name": "Utah Valley Realty",
+    "address": "300 West Center Street, Orem, UT",
+    "phone": "(801) 555-4404",
+    "website": "https://utahvalleyrealty.example",
+    "image": "images/business4.webp",
+    "membership": 3,
+    "description": "Residential and commercial real estate services."
+  },
+  {
+    "name": "Peak Outdoor Supply",
+    "address": "62 Adventure Lane, Orem, UT",
+    "phone": "(801) 555-5505",
+    "website": "https://peakoutdoor.example",
+    "image": "images/business5.webp",
+    "membership": 2,
+    "description": "Outdoor gear and hiking equipment retailer."
+  },
+  {
+    "name": "Canyon Medical Clinic",
+    "address": "455 Wellness Drive, Orem, UT",
+    "phone": "(801) 555-6606",
+    "website": "https://canyonmedical.example",
+    "image": "images/business6.webp",
+    "membership": 3,
+    "description": "Family medical clinic providing healthcare services."
+  },
+  {
+    "name": "Creative Print Studio",
+    "address": "72 Market Street, Orem, UT",
+    "phone": "(801) 555-7707",
+    "website": "https://creativeprint.example",
+    "image": "images/business7.webp",
+    "membership": 1,
+    "description": "Custom printing, branding, and marketing materials."
+  }
+]
