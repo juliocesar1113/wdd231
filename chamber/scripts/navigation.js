@@ -1,7 +1,19 @@
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector("#nav");
+// Shared mobile menu toggle
 
-menuButton.addEventListener("click", () => {
-  navigation.classList.toggle("open");
-  menuButton.classList.toggle("open");
-});
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector("#navigation");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    menuButton.classList.toggle("open");
+    navigation.classList.toggle("open");
+  });
+
+  // Close nav when a link is clicked
+  navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menuButton.classList.remove("open");
+      navigation.classList.remove("open");
+    });
+  });
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orem Valley Chamber of Commerce — connecting local businesses, leaders, and the community.">
+  <meta name="author" content="Julio Castillo">
+
+  
+  <meta property="og:title" content="Orem Valley Chamber of Commerce">
+  <meta property="og:description" content="Connecting local businesses, leaders, and the community of Orem Valley.">
+  <meta property="og:image" content="https://juliocesar1113.github.io/wdd231/chamber/images/hero.webp">
+  <meta property="og:url" content="https://juliocesar1113.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <title>Home | Orem Valley Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/index.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Orem Valley Chamber of Commerce logo">
+      <span>Orem Valley Chamber of Commerce</span>
+    </div>
+
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Welcome banner">
+      <img src="images/hero.webp" alt="Orem city skyline with Wasatch mountain backdrop">
+      <div class="hero-text">
+        <h1>Welcome to the Orem Valley Chamber of Commerce</h1>
+        <p>Connecting local businesses, leaders, and the community.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Events + Weather -->
+    <div class="home-grid">
+
+      <section class="card" aria-labelledby="events-heading">
+        <p class="card-header">Community</p>
+        <h2 id="events-heading">Current Events</h2>
+
+        <article class="event-item">
+          <h3>Business Networking Night</h3>
+          <p>Meet local business owners and build new community connections. Join us every first Thursday of the month at the Orem Civic Center.</p>
+        </article>
+
+        <article class="event-item">
+          <h3>Small Business Workshop</h3>
+          <p>Learn practical strategies to grow your business online and locally. Free admission for chamber members.</p>
+        </article>
+
+        <article class="event-item">
+          <h3>Annual Chamber Gala</h3>
+          <p>Celebrate the year's achievements with fellow business leaders. Tickets available at the chamber office.</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="weather-heading">
+        <p class="card-header">Orem, Utah</p>
+        <h2 id="weather-heading">Current Weather</h2>
+
+        <div class="weather-main">
+          <span class="weather-temp" id="current-temp">--°F</span>
+          <span class="weather-desc" id="weather-desc">Loading…</span>
+        </div>
+
+        <h3>3-Day Forecast</h3>
+        <div class="forecast-list" id="forecast" aria-label="Three day forecast"></div>
+      </section>
+
+    </div>
+
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <p class="card-header">Featured Members</p>
+      <h2 id="spotlights-heading">Company Spotlights</h2>
+      <div id="spotlight-cards"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <h2>Orem Valley Chamber of Commerce</h2>
+      <p>56 Center Street</p>
+      <p>Orem, Utah 84057</p>
+      <p>info@oremvalleycc.org</p>
+      <p>(801) 555-2300</p>
+    </div>
+
+    <div class="social" aria-label="Social media links">
+      <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <div>
+      <p>WDD 231 Class Project</p>
+      <p>Julio Castillo</p>
+      <p>&copy; <span id="currentyear"></span> Orem Valley Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

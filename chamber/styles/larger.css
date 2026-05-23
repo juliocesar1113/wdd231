@@ -1,32 +1,137 @@
+/* =============================================
+   OREM VALLEY CHAMBER OF COMMERCE
+   — Tablet & Desktop 
+   ============================================= */
+
 @media only screen and (min-width: 40rem) {
 
+  /* ---------- Header ---------- */
+  header {
+    padding: 0.75rem 2rem;
+  }
+
+  .brand span {
+    font-size: 1.15rem;
+  }
+
+  /* ---------- Hide hamburger, show nav ---------- */
   #menu {
     display: none;
   }
 
-  nav {
+  #navigation {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    gap: 0;
   }
 
-  nav a {
-    flex: 1;
-    text-align: center;
-    border: none;
+  #navigation a {
+    border-bottom: none;
+    border-left: none !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
   }
 
+  #navigation a.active {
+    background-color: rgba(200,146,42,0.2);
+    color: var(--clr-accent-lt);
+  }
+
+  /* ---------- Main ---------- */
   main {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem 1.5rem;
   }
 
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+  }
+
+  .hero img {
+    height: 420px;
+  }
+
+  .hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(11,31,58,0.95) 0%, rgba(11,31,58,0.5) 70%, transparent 100%);
+    padding: 2.5rem 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.05rem;
+    max-width: 520px;
+  }
+
+  /* ---------- Home Grid ---------- */
+  .home-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 1.25rem;
+  }
+
+  /* ---------- Spotlights ---------- */
+  #spotlight-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ---------- Directory Members Grid ---------- */
+  #members.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 0.75rem 3rem;
+  }
+
+  .brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brand span {
+    font-size: 1.25rem;
+  }
+
+  #navigation a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  /* ---------- Directory Members Grid ---------- */
   #members.grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  footer {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+  /* ---------- Hero ---------- */
+  .hero img {
+    height: 520px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.4rem;
   }
 }
