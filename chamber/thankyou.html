@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for applying to join the Orem Valley Chamber of Commerce.">
+  <meta name="author" content="Julio Castillo">
+
+  <title>Thank You | Orem Valley Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Orem Valley Chamber of Commerce logo">
+      <span>Orem Valley Chamber of Commerce</span>
+    </div>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main class="thankyou-main">
+
+    <div class="thankyou-card">
+      <div class="thankyou-icon">🎉</div>
+      <p class="card-header">Application Received</p>
+      <h1>Thank You for Joining!</h1>
+      <p class="thankyou-subtitle">We're excited to welcome you to the Orem Valley Chamber of Commerce. A member of our team will be in touch shortly.</p>
+
+      <section class="submission-summary" aria-label="Your submitted information">
+        <h2>Your Application Summary</h2>
+
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-label">First Name</span>
+            <span class="summary-value" id="s-firstname">—</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Last Name</span>
+            <span class="summary-value" id="s-lastname">—</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Email</span>
+            <span class="summary-value" id="s-email">—</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Mobile Phone</span>
+            <span class="summary-value" id="s-phone">—</span>
+          </div>
+          <div class="summary-item summary-item--full">
+            <span class="summary-label">Business Name</span>
+            <span class="summary-value" id="s-orgname">—</span>
+          </div>
+          <div class="summary-item summary-item--full">
+            <span class="summary-label">Application Date</span>
+            <span class="summary-value" id="s-timestamp">—</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="thankyou-actions">
+        <a href="index.html" class="cta-button">Return Home</a>
+        <a href="directory.html" class="secondary-btn">View Directory</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>
+      <h2>Orem Valley Chamber of Commerce</h2>
+      <p>56 Center Street</p>
+      <p>Orem, Utah 84057</p>
+      <p>info@oremvalleycc.org</p>
+      <p>(801) 555-2300</p>
+    </div>
+    <div class="social" aria-label="Social media links">
+      <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project</p>
+      <p>Julio Castillo</p>
+      <p>&copy; <span id="currentyear"></span> Orem Valley Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

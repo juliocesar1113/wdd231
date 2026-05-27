@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Orem Valley Chamber of Commerce — apply for membership and connect with local businesses.">
+  <meta name="author" content="Julio Castillo">
+
+  <meta property="og:title" content="Join | Orem Valley Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership in the Orem Valley Chamber of Commerce.">
+  <meta property="og:image" content="https://juliocesar1113.github.io/wdd231/chamber/images/logo.svg">
+  <meta property="og:url" content="https://juliocesar1113.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <title>Join | Orem Valley Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Orem Valley Chamber of Commerce logo">
+      <span>Orem Valley Chamber of Commerce</span>
+    </div>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main class="join-main">
+
+    <div class="join-intro">
+      <p class="card-header">Become a Member</p>
+      <h1>Join the Chamber</h1>
+      <p class="join-subtitle">Grow your business by connecting with Orem Valley's most vibrant professional community.</p>
+    </div>
+
+    <div class="join-layout">
+
+      <!-- Application Form -->
+      <section class="join-form-section">
+        <form action="thankyou.html" method="get" id="join-form" novalidate>
+
+          <div class="form-group">
+            <label for="first-name">
+              First Name <span class="required">*</span>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required
+                placeholder="Jane">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">
+              Last Name <span class="required">*</span>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required
+                placeholder="Smith">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="org-title">
+              Title Within Organization
+              <input
+                type="text"
+                id="org-title"
+                name="org-title"
+                title="Enter your organizational title (letters, hyphens, spaces, min 7 characters)"
+                autocomplete="organization-title"
+                pattern="[A-Za-z\- ]{7,}"
+                placeholder="Director of Marketing">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              Email Address <span class="required">*</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                title="Enter a valid email address"
+                autocomplete="email"
+                required
+                placeholder="jane@yourbusiness.com">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              Mobile Phone <span class="required">*</span>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                title="Enter your mobile phone number"
+                autocomplete="tel"
+                required
+                placeholder="(801) 555-0000">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="org-name">
+              Business / Organization Name <span class="required">*</span>
+              <input
+                type="text"
+                id="org-name"
+                name="org-name"
+                title="Enter your business or organization name"
+                autocomplete="organization"
+                required
+                placeholder="Acme Co.">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="membership">
+              Membership Level <span class="required">*</span>
+              <select id="membership" name="membership" title="Select a membership level" required>
+                <option value="" disabled selected>Select a level…</option>
+                <option value="np">NP Membership — Non-Profit (Free)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="description">
+              Business Description
+              <textarea
+                id="description"
+                name="description"
+                title="Briefly describe your business or organization"
+                rows="4"
+                placeholder="Tell us about your business…"></textarea>
+            </label>
+          </div>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <input type="submit" value="Submit Application" class="submit-btn">
+
+        </form>
+      </section>
+
+      <!-- Membership Level Cards -->
+      <aside class="membership-cards" aria-label="Membership levels">
+        <p class="card-header">Membership Levels</p>
+        <h2>Choose Your Tier</h2>
+
+        <div class="level-card level-np" style="--delay: 0.1s">
+          <div class="level-icon">🌱</div>
+          <h3>NP Membership</h3>
+          <p class="level-price">Free</p>
+          <p class="level-desc">For non-profit organizations serving the Orem Valley community.</p>
+          <button class="learn-btn" data-modal="modal-np">Learn More</button>
+        </div>
+
+        <div class="level-card level-bronze" style="--delay: 0.25s">
+          <div class="level-icon">🥉</div>
+          <h3>Bronze Membership</h3>
+          <p class="level-price">$200 / year</p>
+          <p class="level-desc">A great starting point for small businesses entering the chamber.</p>
+          <button class="learn-btn" data-modal="modal-bronze">Learn More</button>
+        </div>
+
+        <div class="level-card level-silver" style="--delay: 0.4s">
+          <div class="level-icon">🥈</div>
+          <h3>Silver Membership</h3>
+          <p class="level-price">$400 / year</p>
+          <p class="level-desc">Enhanced visibility and networking for growing businesses.</p>
+          <button class="learn-btn" data-modal="modal-silver">Learn More</button>
+        </div>
+
+        <div class="level-card level-gold" style="--delay: 0.55s">
+          <div class="level-icon">🥇</div>
+          <h3>Gold Membership</h3>
+          <p class="level-price">$800 / year</p>
+          <p class="level-desc">Maximum exposure and premium benefits for established businesses.</p>
+          <button class="learn-btn" data-modal="modal-gold">Learn More</button>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- Modals -->
+
+  <dialog id="modal-np" class="membership-modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon">🌱</div>
+      <h2>NP Membership</h2>
+      <p class="modal-price">Free — For Non-Profit Organizations</p>
+      <ul class="modal-benefits">
+        <li>✓ Chamber directory listing</li>
+        <li>✓ Access to monthly networking events</li>
+        <li>✓ Community bulletin board posting</li>
+        <li>✓ Chamber newsletter inclusion</li>
+        <li>✓ Voting rights at annual meetings</li>
+      </ul>
+      <button class="modal-close-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-bronze" class="membership-modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon">🥉</div>
+      <h2>Bronze Membership</h2>
+      <p class="modal-price">$200 / year</p>
+      <ul class="modal-benefits">
+        <li>✓ Everything in NP membership</li>
+        <li>✓ Business profile on chamber website</li>
+        <li>✓ 10% discount on chamber events</li>
+        <li>✓ Access to member-only workshops</li>
+        <li>✓ Social media mention (quarterly)</li>
+        <li>✓ Business referral network access</li>
+      </ul>
+      <button class="modal-close-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-silver" class="membership-modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon">🥈</div>
+      <h2>Silver Membership</h2>
+      <p class="modal-price">$400 / year</p>
+      <ul class="modal-benefits">
+        <li>✓ Everything in Bronze membership</li>
+        <li>✓ Spotlight eligibility on home page</li>
+        <li>✓ 20% discount on chamber events</li>
+        <li>✓ Featured in monthly newsletter</li>
+        <li>✓ Social media mention (monthly)</li>
+        <li>✓ One free training session per year</li>
+        <li>✓ Priority event registration</li>
+      </ul>
+      <button class="modal-close-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-gold" class="membership-modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon">🥇</div>
+      <h2>Gold Membership</h2>
+      <p class="modal-price">$800 / year</p>
+      <ul class="modal-benefits">
+        <li>✓ Everything in Silver membership</li>
+        <li>✓ Guaranteed spotlight on home page</li>
+        <li>✓ 30% discount on all chamber events</li>
+        <li>✓ Featured business of the month</li>
+        <li>✓ Social media mention (weekly)</li>
+        <li>✓ Three free training sessions per year</li>
+        <li>✓ Speaking opportunities at events</li>
+        <li>✓ Logo on chamber printed materials</li>
+        <li>✓ Dedicated chamber liaison</li>
+      </ul>
+      <button class="modal-close-btn">Close</button>
+    </div>
+  </dialog>
+
+  <footer>
+    <div>
+      <h2>Orem Valley Chamber of Commerce</h2>
+      <p>56 Center Street</p>
+      <p>Orem, Utah 84057</p>
+      <p>info@oremvalleycc.org</p>
+      <p>(801) 555-2300</p>
+    </div>
+    <div class="social" aria-label="Social media links">
+      <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project</p>
+      <p>Julio Castillo</p>
+      <p>&copy; <span id="currentyear"></span> Orem Valley Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>
