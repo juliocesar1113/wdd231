@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the best attractions, parks, and culture Orem Valley has to offer.">
+  <meta name="author" content="Julio Castillo">
+
+  <meta property="og:title" content="Discover Orem Valley | Chamber of Commerce">
+  <meta property="og:description" content="Explore the top attractions, trails, arts, and experiences in Orem, Utah.">
+  <meta property="og:image" content="https://juliocesar1113.github.io/wdd231/chamber/images/logo.svg">
+  <meta property="og:url" content="https://juliocesar1113.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+
+  <title>Discover | Orem Valley Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/discover.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Orem Valley Chamber of Commerce logo">
+      <span>Orem Valley Chamber of Commerce</span>
+    </div>
+    <button id="menu" aria-label="Toggle navigation menu"></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html" class="active">Discover</a>
+    </nav>
+  </header>
+
+  <main class="discover-main">
+
+    <div class="discover-intro">
+      <p class="card-header">Explore Orem Valley</p>
+      <h1>Discover Our Community</h1>
+      <p class="discover-subtitle">From mountain peaks to cultural gems, Orem Valley has something for everyone. Explore the attractions that make our community a premier destination in Utah.</p>
+    </div>
+
+    <!-- Visit message banner -->
+    <div class="visit-banner" role="status" aria-live="polite">
+      <span class="visit-icon">👋</span>
+      <p id="visit-message">Welcome!</p>
+    </div>
+
+    <!-- Cards grid (populated by JS) -->
+    <section id="discover-grid" aria-label="Local attractions"></section>
+
+  </main>
+
+  <footer>
+    <div>
+      <h2>Orem Valley Chamber of Commerce</h2>
+      <p>56 Center Street</p>
+      <p>Orem, Utah 84057</p>
+      <p>info@oremvalleycc.org</p>
+      <p>(801) 555-2300</p>
+    </div>
+    <div class="social" aria-label="Social media links">
+      <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>
+      <p>WDD 231 Class Project</p>
+      <p>Julio Castillo</p>
+      <p>&copy; <span id="currentyear"></span> Orem Valley Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

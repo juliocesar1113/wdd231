@@ -1,0 +1,224 @@
+/* =============================================
+   discover.css — Discover Page Styles
+   grid-template-areas: small / medium / large
+   ============================================= */
+
+/* ---------- Page Layout ---------- */
+.discover-main {
+  padding: 1.25rem 1rem;
+}
+
+.discover-intro {
+  margin-bottom: 1.25rem;
+}
+
+.discover-intro h1 {
+  margin-bottom: 0.4rem;
+}
+
+.discover-subtitle {
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  max-width: 620px;
+}
+
+/* ---------- Visit Banner ---------- */
+.visit-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, rgba(11,31,58,0.06), rgba(200,146,42,0.08));
+  border: 1px solid rgba(200,146,42,0.25);
+  border-left: 4px solid var(--clr-accent);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.visit-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.visit-banner p {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--clr-secondary);
+}
+
+/* ---------- Discover Cards ---------- */
+.discover-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card h2 {
+  font-size: 1rem;
+  color: var(--clr-primary);
+  padding: 1rem 1rem 0.4rem;
+}
+
+.discover-card figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: none; /* no hover effect on mobile */
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--clr-accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 0.5rem 1rem 0;
+}
+
+.discover-card p {
+  font-size: 0.87rem;
+  color: var(--clr-text-muted);
+  padding: 0.4rem 1rem;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.learn-more-btn {
+  margin: 0.75rem 1rem 1rem;
+  align-self: flex-start;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1.5px solid var(--clr-accent);
+  border-radius: var(--radius-sm);
+  color: var(--clr-accent);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.learn-more-btn:hover {
+  background: var(--clr-accent);
+  color: white;
+}
+
+/* ============================================================
+   SMALL SCREENS (320px – 640px)
+   Single column, stacked layout
+   ============================================================ */
+#discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1rem;
+}
+
+[data-area="card1"] { grid-area: card1; }
+[data-area="card2"] { grid-area: card2; }
+[data-area="card3"] { grid-area: card3; }
+[data-area="card4"] { grid-area: card4; }
+[data-area="card5"] { grid-area: card5; }
+[data-area="card6"] { grid-area: card6; }
+[data-area="card7"] { grid-area: card7; }
+[data-area="card8"] { grid-area: card8; }
+
+/* ============================================================
+   MEDIUM SCREENS (641px – 1024px)
+   Asymmetric 2-column layout with featured cards
+   ============================================================ */
+@media only screen and (min-width: 40.063rem) {
+
+  .discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  #discover-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card1 card3"
+      "card4 card5"
+      "card6 card5"
+      "card7 card8";
+    gap: 1.1rem;
+  }
+
+  /* Enable hover image effects on medium+ */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .discover-card figure img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.15);
+  }
+
+  /* Featured cards (spanning rows) get taller images */
+  [data-area="card1"] figure img,
+  [data-area="card5"] figure img {
+    height: 100%;
+    min-height: 240px;
+    max-height: 380px;
+  }
+
+  [data-area="card1"] figure,
+  [data-area="card5"] figure {
+    flex: 1;
+  }
+
+  [data-area="card1"],
+  [data-area="card5"] {
+    flex-direction: column;
+  }
+}
+
+/* ============================================================
+   LARGE SCREENS (1025px+)
+   3-column magazine layout with prominent featured cards
+   ============================================================ */
+@media only screen and (min-width: 64.063rem) {
+
+  #discover-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card1 card4 card5"
+      "card6 card7 card8";
+    gap: 1.25rem;
+  }
+
+  [data-area="card1"] figure img {
+    height: 100%;
+    min-height: 280px;
+  }
+
+  [data-area="card1"] figure {
+    flex: 1;
+  }
+
+  .discover-card figure img {
+    height: 200px;
+  }
+}
