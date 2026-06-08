@@ -2,8 +2,7 @@
 
 import { places } from "../data/places.mjs";
 
-// ── Render Cards ─────────────────────────────────────────────────────────────
-
+// ── Render Cards ───
 const grid = document.querySelector("#discover-grid");
 
 places.forEach((place, i) => {
@@ -24,7 +23,7 @@ places.forEach((place, i) => {
   grid.appendChild(card);
 });
 
-// ── Visit Message ─────────────────────────────────────────────────────────────
+// ── Visit Message ───
 
 const messageEl = document.querySelector("#visit-message");
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
