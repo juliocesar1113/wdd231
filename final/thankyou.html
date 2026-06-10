@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent — Amond Beauty</title>
+  <meta name="description" content="Thank you for contacting Amond Beauty. We'll be in touch within 24 hours." />
+  <meta name="author" content="Amond Beauty" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <main id="main-content" class="thankyou-wrap">
+    <div class="thankyou-card">
+      <div class="thankyou-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <h2>Thank you!</h2>
+      <p>Your message has been sent. We'll get back to you within 24 hours.</p>
+
+      <!-- Submission details from localStorage -->
+      <div class="submission-details" id="submission-details" aria-label="Your submission details">
+        <h4>Your submission</h4>
+        <div id="submission-data"></div>
+      </div>
+
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="catalog.html" class="btn btn-outline">Shop Our Bars</a>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    // Display form submission data from localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('submission-data');
+      try {
+        const raw = localStorage.getItem('amondbeauty_submission');
+        if (!raw) {
+          document.getElementById('submission-details').style.display = 'none';
+          return;
+        }
+        const data = JSON.parse(raw);
+        const labels = {
+          firstName:   'First name',
+          lastName:    'Last name',
+          email:       'Email',
+          phone:       'Phone',
+          inquiryType: 'Inquiry type',
+          message:     'Message',
+          newsletter:  'Newsletter',
+          timestamp:   'Submitted',
+        };
+        const html = Object.entries(data)
+          .filter(([, v]) => v)
+          .map(([k, v]) => {
+            const label = labels[k] || k;
+            const val = k === 'message' && v.length > 80 ? v.slice(0, 80) + '…' : v;
+            return `<div class="detail-item">
+              <span class="key">${label}</span>
+              <span class="val">${val}</span>
+            </div>`;
+          })
+          .join('');
+        container.innerHTML = html || '<p style="color:var(--muted);font-size:0.85rem;">No data found.</p>';
+        // Clear after display so it's one-time
+        localStorage.removeItem('amondbeauty_submission');
+      } catch (_) {
+        document.getElementById('submission-details').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

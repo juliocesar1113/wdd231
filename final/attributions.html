@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attributions — Amond Beauty</title>
+  <meta name="author" content="Amond Beauty" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body style="padding-top:68px;">
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">Amond Beauty<span>Natural Hair Care</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main style="max-width:720px; margin:0 auto; padding:4rem 1.5rem 6rem;">
+    <h1 style="font-family:var(--font-display); font-size:2.4rem; font-weight:300; color:var(--bark-deep); margin-bottom:0.5rem;">Attributions</h1>
+    <p style="color:var(--muted); margin-bottom:3rem;">Sources and credits used in the Amond Beauty website.</p>
+
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.2rem; margin-bottom:1rem; color:var(--bark-deep);">Fonts</h2>
+      <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+        <li style="font-size:0.9rem; color:var(--ink);">
+          <strong>Cormorant Garamond</strong> — Christian Thalmann via
+          <a href="https://fonts.google.com/specimen/Cormorant+Garamond" target="_blank" rel="noopener" style="color:var(--blush-dark);">Google Fonts</a>.
+          Licensed under SIL Open Font License 1.1.
+        </li>
+        <li style="font-size:0.9rem; color:var(--ink);">
+          <strong>DM Sans</strong> — Colophon Foundry via
+          <a href="https://fonts.google.com/specimen/DM+Sans" target="_blank" rel="noopener" style="color:var(--blush-dark);">Google Fonts</a>.
+          Licensed under SIL Open Font License 1.1.
+        </li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.2rem; margin-bottom:1rem; color:var(--bark-deep);">Images</h2>
+      <p style="font-size:0.9rem; color:var(--muted);">
+        All product images on this site are SVG illustrations generated programmatically as placeholders.
+        Hero and about images are original SVG artwork created for this project.
+        No third-party photography was used.
+      </p>
+    </section>
+
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.2rem; margin-bottom:1rem; color:var(--bark-deep);">Product data</h2>
+      <p style="font-size:0.9rem; color:var(--muted);">
+        All product names, descriptions, ingredients, and pricing are original content created for this academic project
+        and are based on real product categories in the natural cosmetics industry.
+        No data was copied from third-party sources.
+      </p>
+    </section>
+
+    <section style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.2rem; margin-bottom:1rem; color:var(--bark-deep);">Code references</h2>
+      <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+        <li style="font-size:0.9rem; color:var(--ink);">
+          Intersection Observer scroll-reveal pattern inspired by MDN Web Docs:
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener" style="color:var(--blush-dark);">Intersection Observer API</a>.
+        </li>
+        <li style="font-size:0.9rem; color:var(--ink);">
+          ES Modules pattern following MDN Web Docs:
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank" rel="noopener" style="color:var(--blush-dark);">JavaScript modules</a>.
+        </li>
+        <li style="font-size:0.9rem; color:var(--ink);">
+          CSS custom properties pattern following MDN Web Docs:
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener" style="color:var(--blush-dark);">Using CSS custom properties</a>.
+        </li>
+      </ul>
+    </section>
+
+    <p style="font-size:0.8rem; color:var(--muted-light); margin-top:3rem;">
+      This site was created as an individual academic project for a web design course. &copy; 2025 Amond Beauty.
+    </p>
+  </main>
+
+  <script type="module" src="scripts/nav.js">
+    import { initNav } from './scripts/nav.js';
+    document.addEventListener('DOMContentLoaded', initNav);
+  </script>
+  <script type="module">
+    import { initNav } from './scripts/nav.js';
+    document.addEventListener('DOMContentLoaded', initNav);
+  </script>
+</body>
+</html>

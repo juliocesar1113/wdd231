@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog — Amond Beauty Natural Hair Care Bars</title>
+  <meta name="description" content="Browse the full Amond Beauty collection of natural shampoo and conditioner bars. Filter by hair type, scent, and more." />
+  <meta name="author" content="Amond Beauty" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shop Amond Beauty — Shampoo & Conditioner Bars" />
+  <meta property="og:description" content="20+ natural hair care bars for every hair type. Sulfate-free, plastic-free, handcrafted." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amondbeauty.com/catalog.html" />
+  <meta property="og:image" content="images/og-catalog.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="Amond Beauty home">
+          Amond Beauty
+          <span>Natural Hair Care</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="catalog.html" class="nav-cta">Shop Now</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="contact.html">Contact</a>
+    <a href="catalog.html" class="btn btn-primary" style="margin-top:1rem;">Shop Now</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════
+         PAGE HERO
+    ══════════════════════════════════════════ -->
+    <section class="page-hero" aria-labelledby="catalog-heading">
+      <div class="container">
+        <h4>Our collection</h4>
+        <h1 id="catalog-heading">Shop All Bars</h1>
+        <p>Every bar handcrafted with natural ingredients for your specific hair needs.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CATALOG SECTION
+    ══════════════════════════════════════════ -->
+    <section class="section-pad-sm" aria-label="Product catalog">
+      <div class="container">
+
+        <!-- Search -->
+        <div style="margin-bottom:1.5rem;">
+          <label for="search-input" class="sr-only">Search products</label>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search by name, hair type, scent…"
+            aria-label="Search products"
+            style="width:100%; max-width:420px; background:var(--warm-white); border:1px solid var(--border-mid); border-radius:40px; padding:0.65rem 1.25rem; font-size:0.9rem; color:var(--ink); outline:none; font-family:var(--font-body);"
+          />
+        </div>
+
+        <!-- Filter + Sort bar -->
+        <div class="filter-bar" role="group" aria-label="Filter and sort products">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="shampoo" aria-pressed="false">Shampoo Bars</button>
+          <button class="filter-btn" data-filter="conditioner" aria-pressed="false">Conditioner Bars</button>
+
+          <div class="sort-wrap">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select" aria-label="Sort products">
+              <option value="default">Featured</option>
+              <option value="rating">Top Rated</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Count -->
+        <p class="products-count" id="products-count" aria-live="polite"></p>
+
+        <!-- Grid populated by JS -->
+        <div
+          class="products-grid"
+          id="catalog-grid"
+          aria-live="polite"
+          aria-label="Product grid"
+        ></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            Amond Beauty
+            <span>Natural Hair Care</span>
+          </a>
+          <p>Handcrafted shampoo and conditioner bars made with love and natural ingredients.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul role="list">
+            <li><a href="catalog.html?filter=shampoo">Shampoo Bars</a></li>
+            <li><a href="catalog.html?filter=conditioner">Conditioner Bars</a></li>
+            <li><a href="catalog.html">All Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul role="list">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Demo Video</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Amond Beauty. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="attributions.html">Attributions</a>
+          <a href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Demo Video</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/catalog.js"></script>
+</body>
+</html>
