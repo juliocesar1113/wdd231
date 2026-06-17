@@ -11,8 +11,8 @@
   <meta property="og:title" content="Shop Amond Beauty — Shampoo & Conditioner Bars" />
   <meta property="og:description" content="20+ natural hair care bars for every hair type. Sulfate-free, plastic-free, handcrafted." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://amondbeauty.com/catalog.html" />
-  <meta property="og:image" content="https://amondbeauty.com/images/og-catalog.svg" />
+  <meta property="og:url" content="https://juliocesar1113.github.io/wdd231/final/catalog.html" />
+  <meta property="og:image" content="https://juliocesar1113.github.io/wdd231/final/images/og-catalog.svg" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
@@ -25,45 +25,45 @@
 </head>
 <body>
 
-  <header class="ab-header" role="banner">
-    <div class="ab-container">
-      <nav class="ab-nav-inner" aria-label="Main navigation">
+  <header class="ab-site-head" role="banner">
+    <div class="ab-wrap">
+      <nav class="ab-menu-inner" aria-label="Main navigation">
         <a href="index.html" class="ab-logo" aria-label="Amond Beauty home">
           Amond Beauty
           <span>Natural Hair Care</span>
         </a>
-        <ul class="ab-nav-links" role="list">
+        <ul class="ab-menu-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="catalog.html" class="ab-nav-cta">Shop Now</a></li>
+          <li><a href="catalog.html" class="ab-menu-cta">Shop Now</a></li>
         </ul>
-        <button class="ab-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button class="ab-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
   </header>
 
-  <nav class="ab-mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <nav class="ab-mobile-menu" id="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="catalog.html">Catalog</a>
     <a href="contact.html">Contact</a>
-    <a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>
+    <a href="catalog.html" class="ab-action ab-action-primary">Shop Now</a>
   </nav>
 
   <main id="main-content">
 
     <section class="ab-page-hero" aria-labelledby="catalog-heading">
-      <div class="ab-container">
-        <h4>Our collection</h4>
+      <div class="ab-wrap">
+        <p class="ab-eyebrow">Our collection</p>
         <h1 id="catalog-heading">Shop All Bars</h1>
         <p>Every bar handcrafted with natural ingredients for your specific hair needs.</p>
       </div>
     </section>
 
     <section class="ab-section-sm" aria-label="Product catalog">
-      <div class="ab-container">
+      <div class="ab-wrap">
 
         <div class="ab-search-wrap">
           <label for="search-input" class="sr-only">Search products</label>
@@ -77,9 +77,9 @@
         </div>
 
         <div class="ab-filter-bar" role="group" aria-label="Filter and sort products">
-          <button class="ab-filter-btn active" data-filter="all" aria-pressed="true">All</button>
-          <button class="ab-filter-btn" data-filter="shampoo" aria-pressed="false">Shampoo Bars</button>
-          <button class="ab-filter-btn" data-filter="conditioner" aria-pressed="false">Conditioner Bars</button>
+          <button class="ab-filter-action active" data-filter="all" aria-pressed="true">All</button>
+          <button class="ab-filter-action" data-filter="shampoo" aria-pressed="false">Shampoo Bars</button>
+          <button class="ab-filter-action" data-filter="conditioner" aria-pressed="false">Conditioner Bars</button>
 
           <div class="ab-sort-wrap">
             <label for="sort-select">Sort by</label>
@@ -98,6 +98,7 @@
         <div
           class="ab-products-grid"
           id="catalog-grid"
+          role="region"
           aria-live="polite"
           aria-label="Product grid"
         ></div>
@@ -108,7 +109,7 @@
   </main>
 
   <footer class="ab-footer" role="contentinfo">
-    <div class="ab-container">
+    <div class="ab-wrap">
       <div class="ab-footer-grid">
         <div class="ab-footer-brand">
           <a href="index.html" class="ab-logo">
@@ -118,7 +119,7 @@
           <p>Handcrafted shampoo and conditioner bars made with love and natural ingredients.</p>
         </div>
         <div class="ab-footer-col">
-          <h4>Navigate</h4>
+          <h2>Navigate</h2>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -126,7 +127,7 @@
           </ul>
         </div>
         <div class="ab-footer-col">
-          <h4>Products</h4>
+          <h2>Products</h2>
           <ul role="list">
             <li><a href="catalog.html?filter=shampoo">Shampoo Bars</a></li>
             <li><a href="catalog.html?filter=conditioner">Conditioner Bars</a></li>
@@ -134,7 +135,7 @@
           </ul>
         </div>
         <div class="ab-footer-col">
-          <h4>Info</h4>
+          <h2>Info</h2>
           <ul role="list">
             <li><a href="attributions.html">Attributions</a></li>
             <li><a href="contact.html">Contact Us</a></li>

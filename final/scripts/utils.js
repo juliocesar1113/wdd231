@@ -1,4 +1,5 @@
-// utils.js 
+// utils.js — shared helpers
+
 /**
  * Generate a star rating SVG string
  */
@@ -54,10 +55,10 @@ export function debounce(fn, delay = 200) {
  * Show a toast notification
  */
 export function showToast(message, icon = '✓') {
-  let container = document.querySelector('.ab-toast-container');
+  let container = document.querySelector('.ab-toast-stack');
   if (!container) {
     container = document.createElement('div');
-    container.className = 'ab-toast-container';
+    container.className = 'ab-toast-stack';
     document.body.appendChild(container);
   }
   const toast = document.createElement('div');

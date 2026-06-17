@@ -1,6 +1,6 @@
 // products.js — product loading and rendering module
 import { renderStars, formatPrice, badgeClass, getProductImageSVG, showToast } from './utils.js';
-import { openModal } from './modal.js';
+import { openModal } from './product-dialog.js';
 
 /**
  * Fetch products from local JSON
@@ -26,22 +26,22 @@ export function renderProductCard(product) {
   const imgSrc = getProductImageSVG(product);
   const badgeCls = badgeClass(product.badge);
   const badgeHTML = product.badge
-    ? `<span class="ab-card-badge ${badgeCls}">${product.badge}</span>`
+    ? `<span class="ab-tile-badge ${badgeCls}">${product.badge}</span>`
     : '';
   const stockBtn = product.inStock
-    ? `<button class="ab-card-btn" data-id="${product.id}">Details</button>`
-    : `<span class="ab-card-out-of-stock">Out of stock</span>`;
+    ? `<button class="ab-tile-action" data-id="${product.id}">Details</button>`
+    : `<span class="ab-tile-out-of-stock">Out of stock</span>`;
 
   return `
     <article
-      class="ab-product-card"
+      class="ab-product-tile"
       data-id="${product.id}"
       data-type="${product.type}"
       tabindex="0"
       role="button"
       aria-label="View details for ${product.name}"
     >
-      <div class="ab-card-image">
+      <div class="ab-tile-image">
         ${badgeHTML}
         <img
           src="${imgSrc}"
@@ -51,19 +51,19 @@ export function renderProductCard(product) {
           loading="lazy"
         />
       </div>
-      <div class="ab-card-body">
-        <p class="ab-card-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
-        <h3 class="ab-card-name">${product.name}</h3>
-        <p class="ab-card-hair-type">For: ${product.hairType}</p>
-        <div class="ab-card-rating">
+      <div class="ab-tile-body">
+        <p class="ab-tile-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
+        <h3 class="ab-tile-name">${product.name}</h3>
+        <p class="ab-tile-hairtype">For: ${product.hairType}</p>
+        <div class="ab-tile-rating">
           ${renderStars(product.rating)}
-          <span class="ab-card-rating-num">${product.rating}</span>
-          <span class="ab-card-rating-count">(${product.reviews})</span>
+          <span class="ab-tile-rating-num">${product.rating}</span>
+          <span class="ab-tile-rating-count">(${product.reviews})</span>
         </div>
-        <div class="ab-card-footer">
+        <div class="ab-tile-footer">
           <div>
-            <span class="ab-card-price">${formatPrice(product.price)}</span>
-            <span class="ab-card-weight">${product.weight}</span>
+            <span class="ab-tile-price">${formatPrice(product.price)}</span>
+            <span class="ab-tile-weight">${product.weight}</span>
           </div>
           ${stockBtn}
         </div>
@@ -77,7 +77,7 @@ export function renderProductCard(product) {
  */
 export function renderSkeletons(count, container) {
   container.innerHTML = Array.from({ length: count }, () => `
-    <div class="ab-skeleton-card">
+    <div class="ab-skeleton-tile">
       <div class="ab-skeleton ab-skeleton-img"></div>
       <div class="ab-skeleton-body">
         <div class="ab-skeleton ab-skeleton-line w40"></div>

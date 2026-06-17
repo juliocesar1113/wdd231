@@ -6,18 +6,18 @@ let currentProduct = null;
 
 function buildModal() {
   overlay = document.createElement('div');
-  overlay.className = 'ab-modal-overlay';
-  overlay.id = 'product-modal';
+  overlay.className = 'ab-dialog-overlay';
+  overlay.id = 'product-dialog';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', 'Product details');
   overlay.innerHTML = `
-    <div class="ab-modal" id="modal-content">
-      <div class="ab-modal-header">
+    <div class="ab-dialog" id="dialog-content">
+      <div class="ab-dialog-header">
         <div></div>
-        <button class="ab-modal-close" id="modal-close-btn" aria-label="Close product details">&#x2715;</button>
+        <button class="ab-dialog-close" id="dialog-close-action" aria-label="Close product details">&#x2715;</button>
       </div>
-      <div class="ab-modal-body" id="modal-body"></div>
+      <div class="ab-dialog-body" id="dialog-body"></div>
     </div>
   `;
   document.body.appendChild(overlay);
@@ -26,7 +26,7 @@ function buildModal() {
     if (e.target === overlay) closeModal();
   });
 
-  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+  document.getElementById('dialog-close-action').addEventListener('click', closeModal);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
@@ -44,46 +44,46 @@ export function openModal(product) {
     .join('');
 
   const stockHTML = product.inStock
-    ? `<a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>`
-    : `<span class="ab-card-out-of-stock">Currently out of stock</span>`;
+    ? `<a href="catalog.html" class="ab-action ab-action-primary">Shop Now</a>`
+    : `<span class="ab-tile-out-of-stock">Currently out of stock</span>`;
 
-  document.getElementById('modal-body').innerHTML = `
-    <div class="ab-modal-image">
+  document.getElementById('dialog-body').innerHTML = `
+    <div class="ab-dialog-image">
       <img src="${imgSrc}" alt="${product.name}" width="300" height="300"/>
     </div>
-    <div class="ab-modal-info">
-      <p class="ab-modal-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
-      <h2 class="ab-modal-name">${product.name}</h2>
-      <div class="ab-card-rating">
+    <div class="ab-dialog-info">
+      <p class="ab-dialog-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
+      <h2 class="ab-dialog-name">${product.name}</h2>
+      <div class="ab-tile-rating">
         ${renderStars(product.rating)}
-        <span class="ab-card-rating-num">${product.rating}</span>
-        <span class="ab-card-rating-count">(${product.reviews} reviews)</span>
+        <span class="ab-tile-rating-num">${product.rating}</span>
+        <span class="ab-tile-rating-count">(${product.reviews} reviews)</span>
       </div>
-      <p class="ab-modal-desc">${product.description}</p>
-      <div class="ab-modal-meta">
-        <div class="ab-modal-meta-item">
+      <p class="ab-dialog-desc">${product.description}</p>
+      <div class="ab-dialog-meta">
+        <div class="ab-dialog-meta-item">
           <span class="label">Hair type</span>
           <span class="value">${product.hairType}</span>
         </div>
-        <div class="ab-modal-meta-item">
+        <div class="ab-dialog-meta-item">
           <span class="label">Scent</span>
           <span class="value">${product.scent}</span>
         </div>
-        <div class="ab-modal-meta-item">
+        <div class="ab-dialog-meta-item">
           <span class="label">Weight</span>
           <span class="value">${product.weight}</span>
         </div>
-        <div class="ab-modal-meta-item">
+        <div class="ab-dialog-meta-item">
           <span class="label">Status</span>
           <span class="value">${product.inStock ? 'In Stock' : 'Out of Stock'}</span>
         </div>
       </div>
-      <div class="ab-modal-ingredients">
+      <div class="ab-dialog-ingredients">
         <h4>Key ingredients</h4>
         <div class="ab-ingredient-tags">${ingredientHTML}</div>
       </div>
-      <div class="ab-modal-price-row">
-        <span class="ab-modal-price">${formatPrice(product.price)}</span>
+      <div class="ab-dialog-price-line">
+        <span class="ab-dialog-price">${formatPrice(product.price)}</span>
         ${stockHTML}
       </div>
     </div>
@@ -92,7 +92,7 @@ export function openModal(product) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  setTimeout(() => document.getElementById('modal-close-btn')?.focus(), 50);
+  setTimeout(() => document.getElementById('dialog-close-action')?.focus(), 50);
 }
 
 export function closeModal() {

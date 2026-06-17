@@ -1,9 +1,9 @@
 // nav.js — shared navigation behavior
 
 export function initNav() {
-  const header    = document.querySelector('.ab-header');
-  const hamburger = document.querySelector('.ab-hamburger');
-  const mobileNav = document.querySelector('.ab-mobile-nav');
+  const header    = document.querySelector('.ab-site-head');
+  const hamburger = document.querySelector('.ab-menu-toggle');
+  const mobileNav = document.querySelector('.ab-mobile-menu');
 
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 20);
@@ -28,7 +28,7 @@ export function initNav() {
   }
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.ab-nav-links a, .ab-mobile-nav a').forEach(link => {
+  document.querySelectorAll('.ab-menu-links a, .ab-mobile-menu a').forEach(link => {
     const href = link.getAttribute('href');
     if (href && (href === currentPage || href.endsWith(currentPage))) {
       link.classList.add('active');

@@ -1,9 +1,10 @@
 /* ═══════════════════════════════════════════════════════
    Amond Beauty — base.css
    Design tokens, reset, base typography
+   Google Fonts are linked directly in each HTML head.
 ═══════════════════════════════════════════════════════ */
 
-/* ── Design Tokens ─*/
+/* ── Design Tokens ─────────────────────────────────── */
 :root {
   --cream:        #FAF6F0;
   --warm-white:   #FEF9F4;
@@ -42,7 +43,7 @@
   --max-width:    1140px;
 }
 
-/* ── Reset ──*/
+/* ── Reset ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
 img, video { max-width: 100%; display: block; }
@@ -61,7 +62,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── Typography ── */
+/* ── Typography ────────────────────────────────────── */
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 400;
@@ -72,6 +73,14 @@ h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); font-weight: 300; letter-spacing: 0.
 h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: 0.02em; }
 h3 { font-size: 1.25rem; }
 h4 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ab-eyebrow {
   font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 500;

@@ -48,7 +48,7 @@ function initPreferences() {
   const saved = localStorage.getItem(PREF_KEY) || 'all';
   setActivePreference(saved);
 
-  widget.querySelectorAll('.ab-pref-btn').forEach(btn => {
+  widget.querySelectorAll('.ab-pref-action').forEach(btn => {
     btn.addEventListener('click', () => {
       const val = btn.dataset.pref;
       localStorage.setItem(PREF_KEY, val);
@@ -67,7 +67,7 @@ function initPreferences() {
 }
 
 function setActivePreference(val) {
-  document.querySelectorAll('.ab-pref-btn').forEach(btn => {
+  document.querySelectorAll('.ab-pref-action').forEach(btn => {
     btn.classList.toggle('selected', btn.dataset.pref === val);
   });
 }

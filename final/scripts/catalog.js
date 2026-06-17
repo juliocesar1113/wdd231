@@ -36,10 +36,10 @@ async function initCatalog() {
     });
   }
 
-  document.querySelectorAll('.ab-filter-btn').forEach(btn => {
+  document.querySelectorAll('.ab-filter-action').forEach(btn => {
     btn.addEventListener('click', () => {
       activeFilter = btn.dataset.filter;
-      document.querySelectorAll('.ab-filter-btn').forEach(b => {
+      document.querySelectorAll('.ab-filter-action').forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-pressed', 'false');
       });
@@ -63,7 +63,7 @@ function readURLFilter() {
   const filter = params.get('filter');
   if (filter && ['shampoo', 'conditioner'].includes(filter)) {
     activeFilter = filter;
-    document.querySelectorAll('.ab-filter-btn').forEach(btn => {
+    document.querySelectorAll('.ab-filter-action').forEach(btn => {
       const match = btn.dataset.filter === filter;
       btn.classList.toggle('active', match);
       btn.setAttribute('aria-pressed', String(match));
@@ -110,9 +110,9 @@ function renderCatalog() {
     grid.innerHTML = `
       <div class="ab-empty-state">
         <p>No products match your search.</p>
-        <button class="ab-btn ab-btn-ghost" id="clear-search-btn">Clear search</button>
+        <button class="ab-action ab-action-ghost" id="clear-search-action">Clear search</button>
       </div>`;
-    document.getElementById('clear-search-btn')?.addEventListener('click', () => {
+    document.getElementById('clear-search-action')?.addEventListener('click', () => {
       if (searchInput) searchInput.value = '';
       renderCatalog();
     });

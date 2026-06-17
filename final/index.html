@@ -11,8 +11,8 @@
   <meta property="og:title" content="Amond Beauty — Natural Hair Care Bars" />
   <meta property="og:description" content="Handcrafted shampoo and conditioner bars made with natural ingredients. Zero plastic, zero compromise." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://amondbeauty.com/" />
-  <meta property="og:image" content="https://amondbeauty.com/images/og-home.svg" />
+  <meta property="og:url" content="https://juliocesar1113.github.io/wdd231/final/" />
+  <meta property="og:image" content="https://juliocesar1113.github.io/wdd231/final/images/og-home.svg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
@@ -31,33 +31,33 @@
   <!-- ══════════════════════════════════════════
        HEADER / NAV
   ══════════════════════════════════════════ -->
-  <header class="ab-header" role="banner">
-    <div class="ab-container">
-      <nav class="ab-nav-inner" aria-label="Main navigation">
+  <header class="ab-site-head" role="banner">
+    <div class="ab-wrap">
+      <nav class="ab-menu-inner" aria-label="Main navigation">
         <a href="index.html" class="ab-logo" aria-label="Amond Beauty home">
           Amond Beauty
           <span>Natural Hair Care</span>
         </a>
 
-        <ul class="ab-nav-links" role="list">
+        <ul class="ab-menu-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="catalog.html" class="ab-nav-cta">Shop Now</a></li>
+          <li><a href="catalog.html" class="ab-menu-cta">Shop Now</a></li>
         </ul>
 
-        <button class="ab-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button class="ab-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
   </header>
 
-  <nav class="ab-mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <nav class="ab-mobile-menu" id="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="catalog.html">Catalog</a>
     <a href="contact.html">Contact</a>
-    <a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>
+    <a href="catalog.html" class="ab-action ab-action-primary">Shop Now</a>
   </nav>
 
   <main id="main-content">
@@ -66,7 +66,7 @@
          HERO
     ══════════════════════════════════════════ -->
     <section class="ab-hero" aria-labelledby="hero-heading">
-      <div class="ab-container">
+      <div class="ab-wrap">
         <div class="ab-hero-inner">
 
           <div class="ab-hero-text">
@@ -81,8 +81,8 @@
               Zero sulfates, zero parabens, zero plastic waste.
             </p>
             <div class="ab-hero-actions">
-              <a href="catalog.html" class="ab-btn ab-btn-primary">Shop All Bars</a>
-              <a href="#about" class="ab-btn ab-btn-outline">Our Story</a>
+              <a href="catalog.html" class="ab-action ab-action-primary">Shop All Bars</a>
+              <a href="#about" class="ab-action ab-action-outline">Our Story</a>
             </div>
           </div>
 
@@ -110,7 +110,7 @@
          VALUES STRIP
     ══════════════════════════════════════════ -->
     <section class="ab-values-strip" aria-label="Our values">
-      <div class="ab-container">
+      <div class="ab-wrap">
         <ul class="ab-values-grid" role="list">
           <li class="ab-value-item">
             <div class="ab-value-icon" aria-hidden="true">
@@ -148,10 +148,10 @@
          FEATURED PRODUCTS
     ══════════════════════════════════════════ -->
     <section class="ab-section" aria-labelledby="featured-heading">
-      <div class="ab-container">
+      <div class="ab-wrap">
 
         <div class="ab-section-header" data-reveal>
-          <h4>Our products</h4>
+          <p class="ab-eyebrow">Our products</p>
           <h2 id="featured-heading">Customer Favourites</h2>
           <p>Top-rated bars chosen by our community — personalized to your hair type.</p>
           <div class="ab-divider" aria-hidden="true"></div>
@@ -160,20 +160,20 @@
         <div class="ab-preferences-widget" id="pref-widget" data-reveal data-reveal-delay="1" role="region" aria-label="Hair type preferences">
           <span class="ab-pref-label">Show me products for:</span>
           <div class="ab-pref-options" role="group" aria-label="Hair type filter">
-            <button class="ab-pref-btn" data-pref="all">All types</button>
-            <button class="ab-pref-btn" data-pref="shampoo">Shampoo only</button>
-            <button class="ab-pref-btn" data-pref="conditioner">Conditioner only</button>
-            <button class="ab-pref-btn" data-pref="dry">Dry hair</button>
-            <button class="ab-pref-btn" data-pref="oily">Oily scalp</button>
-            <button class="ab-pref-btn" data-pref="curly">Curly hair</button>
+            <button class="ab-pref-action" data-pref="all">All types</button>
+            <button class="ab-pref-action" data-pref="shampoo">Shampoo only</button>
+            <button class="ab-pref-action" data-pref="conditioner">Conditioner only</button>
+            <button class="ab-pref-action" data-pref="dry">Dry hair</button>
+            <button class="ab-pref-action" data-pref="oily">Oily scalp</button>
+            <button class="ab-pref-action" data-pref="curly">Curly hair</button>
           </div>
           <button class="ab-pref-clear" id="pref-clear" aria-label="Clear hair type preference">Clear preference</button>
         </div>
 
-        <div class="ab-products-grid" id="featured-products" aria-live="polite" aria-label="Featured products"></div>
+        <div class="ab-products-grid" id="featured-products" role="region" aria-live="polite" aria-label="Featured products"></div>
 
         <div class="ab-section-header ab-view-all-wrap" data-reveal>
-          <a href="catalog.html" class="ab-btn ab-btn-outline">View All Products</a>
+          <a href="catalog.html" class="ab-action ab-action-outline">View All Products</a>
         </div>
 
       </div>
@@ -183,7 +183,7 @@
          ABOUT STRIP
     ══════════════════════════════════════════ -->
     <section class="ab-section" id="about" aria-labelledby="about-heading">
-      <div class="ab-container">
+      <div class="ab-wrap">
         <div class="ab-about-strip">
 
           <div class="ab-about-image" data-reveal>
@@ -198,7 +198,7 @@
           </div>
 
           <div class="ab-about-text" data-reveal data-reveal-delay="2">
-            <h4>Our story</h4>
+            <p class="ab-eyebrow">Our story</p>
             <h2 id="about-heading">A family business born from a love of natural hair care.</h2>
             <p>
               My wife and I started making these bars in our kitchen because we couldn't find
@@ -209,7 +209,7 @@
               Every bar is handcrafted in small batches using carefully sourced ingredients.
               No shortcuts. No fillers. Just clean, effective hair care you can feel good about.
             </p>
-            <a href="contact.html" class="ab-btn ab-btn-primary ab-about-cta">Get in Touch</a>
+            <a href="contact.html" class="ab-action ab-action-primary ab-about-cta">Get in Touch</a>
           </div>
 
         </div>
@@ -220,16 +220,16 @@
          TESTIMONIALS
     ══════════════════════════════════════════ -->
     <section class="ab-testimonials-wrap" aria-labelledby="reviews-heading">
-      <div class="ab-container">
+      <div class="ab-wrap">
         <div class="ab-section-header ab-testimonials-header" data-reveal>
-          <h4>What customers say</h4>
+          <p class="ab-eyebrow">What customers say</p>
           <h2 id="reviews-heading">Real results, real people.</h2>
           <div class="ab-divider" aria-hidden="true"></div>
         </div>
 
         <ul class="ab-testimonials-grid" role="list">
-          <li class="ab-testimonial-card" data-reveal data-reveal-delay="1">
-            <div class="ab-testimonial-stars" aria-label="5 out of 5 stars">
+          <li class="ab-testimonial-tile" data-reveal data-reveal-delay="1">
+            <div class="ab-testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -239,8 +239,8 @@
             <p class="ab-testimonial-text">"I've tried so many natural shampoo bars and this is the first one that actually lathers well AND leaves my hair soft. The lavender scent is incredible."</p>
             <p class="ab-testimonial-author">— Sarah M., Denver CO</p>
           </li>
-          <li class="ab-testimonial-card" data-reveal data-reveal-delay="2">
-            <div class="ab-testimonial-stars" aria-label="5 out of 5 stars">
+          <li class="ab-testimonial-tile" data-reveal data-reveal-delay="2">
+            <div class="ab-testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -250,8 +250,8 @@
             <p class="ab-testimonial-text">"The Argan &amp; Honey bar transformed my dry, damaged hair. After 3 weeks my hair is shinier and so much more manageable. My whole family switched!"</p>
             <p class="ab-testimonial-author">— Maria R., Austin TX</p>
           </li>
-          <li class="ab-testimonial-card" data-reveal data-reveal-delay="3">
-            <div class="ab-testimonial-stars" aria-label="5 out of 5 stars">
+          <li class="ab-testimonial-tile" data-reveal data-reveal-delay="3">
+            <div class="ab-testimonial-stars" role="img" aria-label="5 out of 5 stars">
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -269,13 +269,13 @@
          CTA BAND
     ══════════════════════════════════════════ -->
     <section class="ab-section ab-cta-band" aria-labelledby="cta-heading">
-      <div class="ab-container" data-reveal>
-        <h4>Ready to make the switch?</h4>
+      <div class="ab-wrap" data-reveal>
+        <p class="ab-eyebrow">Ready to make the switch?</p>
         <h2 id="cta-heading">Find your perfect bar.</h2>
         <p>Browse our full collection of shampoo and conditioner bars, each crafted for a specific hair need.</p>
         <div class="ab-cta-actions">
-          <a href="catalog.html" class="ab-btn ab-btn-primary">Shop the Catalog</a>
-          <a href="contact.html" class="ab-btn ab-btn-outline">Ask a Question</a>
+          <a href="catalog.html" class="ab-action ab-action-primary">Shop the Catalog</a>
+          <a href="contact.html" class="ab-action ab-action-outline">Ask a Question</a>
         </div>
       </div>
     </section>
@@ -286,7 +286,7 @@
        FOOTER
   ══════════════════════════════════════════ -->
   <footer class="ab-footer" role="contentinfo">
-    <div class="ab-container">
+    <div class="ab-wrap">
       <div class="ab-footer-grid">
         <div class="ab-footer-brand">
           <a href="index.html" class="ab-logo">
@@ -296,7 +296,7 @@
           <p>Handcrafted shampoo and conditioner bars made with love and natural ingredients. Small family business, big results.</p>
         </div>
         <div class="ab-footer-col">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -304,7 +304,7 @@
           </ul>
         </div>
         <div class="ab-footer-col">
-          <h4>Products</h4>
+          <h3>Products</h3>
           <ul role="list">
             <li><a href="catalog.html?filter=shampoo">Shampoo Bars</a></li>
             <li><a href="catalog.html?filter=conditioner">Conditioner Bars</a></li>
@@ -312,7 +312,7 @@
           </ul>
         </div>
         <div class="ab-footer-col">
-          <h4>Info</h4>
+          <h3>Info</h3>
           <ul role="list">
             <li><a href="attributions.html">Attributions</a></li>
             <li><a href="contact.html">Contact Us</a></li>
