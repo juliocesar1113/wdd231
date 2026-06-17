@@ -3,7 +3,7 @@
    Layout, nav, hero, buttons, cards, modal, forms, footer
 ═══════════════════════════════════════════════════════ */
 
-/* ── Layout helpers ────────────────────────────────── */
+/* ── Layout helpers ──*/
 .ab-wrap {
   width: 100%;
   max-width: var(--max-width);
@@ -13,7 +13,7 @@
 .ab-section { padding: 5rem 0; }
 .ab-section-sm { padding: 3rem 0; }
 
-/* ── Section header ────────────────────────────────── */
+/* ── Section header ──*/
 .ab-section-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -44,7 +44,7 @@
   margin-bottom: 0;
 }
 
-/* ── Scroll reveal animation ───────────────────────── */
+/* ── Scroll reveal animation ─*/
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);

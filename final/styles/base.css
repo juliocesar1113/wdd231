@@ -1,10 +1,9 @@
 /* ═══════════════════════════════════════════════════════
    Amond Beauty — base.css
    Design tokens, reset, base typography
-   Google Fonts are linked directly in each HTML head.
 ═══════════════════════════════════════════════════════ */
 
-/* ── Design Tokens ─────────────────────────────────── */
+/* ── Design Tokens ─── */
 :root {
   --cream:        #FAF6F0;
   --warm-white:   #FEF9F4;
@@ -43,7 +42,7 @@
   --max-width:    1140px;
 }
 
-/* ── Reset ─────────────────────────────────────────── */
+/* ── Reset ─*/
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
 img, video { max-width: 100%; display: block; }
@@ -52,7 +51,7 @@ a { color: inherit; text-decoration: none; }
 button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
 input, textarea, select { font-family: var(--font-body); }
 
-/* ── Base ──────────────────────────────────────────── */
+/* ── Base ──*/
 body {
   font-family: var(--font-body);
   font-weight: 300;
@@ -62,7 +61,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── Typography ────────────────────────────────────── */
+/* ── Typography ──*/
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 400;
@@ -90,7 +89,7 @@ h4 {
 }
 p { line-height: 1.8; color: var(--ink); }
 
-/* ── Accessibility utility ─────────────────────────── */
+/* ── Accessibility utility ──*/
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
