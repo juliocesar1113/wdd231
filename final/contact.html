@@ -12,139 +12,121 @@
   <meta property="og:description" content="Reach out with any questions about our natural hair care bars. We respond within 24 hours." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://amondbeauty.com/contact.html" />
-  <meta property="og:image" content="images/og-contact.svg" />
+  <meta property="og:image" content="https://amondbeauty.com/images/og-contact.svg" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="stylesheet" href="styles/main.css" />
 
-  <style>
-    /* Visually hidden helper */
-    .sr-only {
-      position: absolute;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       HEADER / NAV
-  ══════════════════════════════════════════ -->
-  <header class="site-header" role="banner">
-    <div class="container">
-      <nav class="nav-inner" aria-label="Main navigation">
-        <a href="index.html" class="nav-logo" aria-label="Amond Beauty home">
+  <header class="ab-header" role="banner">
+    <div class="ab-container">
+      <nav class="ab-nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="ab-logo" aria-label="Amond Beauty home">
           Amond Beauty
           <span>Natural Hair Care</span>
         </a>
-        <ul class="nav-links" role="list">
+        <ul class="ab-nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="catalog.html" class="nav-cta">Shop Now</a></li>
+          <li><a href="catalog.html" class="ab-nav-cta">Shop Now</a></li>
         </ul>
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button class="ab-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <nav class="ab-mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="catalog.html">Catalog</a>
     <a href="contact.html">Contact</a>
-    <a href="catalog.html" class="btn btn-primary" style="margin-top:1rem;">Shop Now</a>
+    <a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>
   </nav>
 
   <main id="main-content">
 
-    <!-- ══════════════════════════════════════════
-         PAGE HERO
-    ══════════════════════════════════════════ -->
-    <section class="page-hero" aria-labelledby="contact-heading">
-      <div class="container">
+    <section class="ab-page-hero" aria-labelledby="contact-heading">
+      <div class="ab-container">
         <h4>Say hello</h4>
         <h1 id="contact-heading">We'd love to<br/><em>hear from you.</em></h1>
         <p>Questions about our bars, custom orders, or wholesale? We reply within 24 hours.</p>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         CONTACT CONTENT
-    ══════════════════════════════════════════ -->
-    <section class="section-pad" aria-label="Contact information and form">
-      <div class="container">
-        <div class="contact-layout">
+    <section class="ab-section" aria-label="Contact information and form">
+      <div class="ab-container">
+        <div class="ab-contact-layout">
 
-          <!-- Left: info -->
-          <div class="contact-info">
+          <div class="ab-contact-info">
             <h2>Get in touch</h2>
             <p>We're a small family business and we personally read every message. Don't hesitate to reach out.</p>
 
-            <div class="contact-details">
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
+            <div class="ab-contact-details">
+              <div class="ab-contact-detail">
+                <div class="ab-contact-detail-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
-                <div class="contact-detail-text">
+                <div class="ab-contact-detail-text">
                   <strong>Email</strong>
                   <span>hello@amondbeauty.com</span>
                 </div>
               </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
+              <div class="ab-contact-detail">
+                <div class="ab-contact-detail-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
-                <div class="contact-detail-text">
+                <div class="ab-contact-detail-text">
                   <strong>Phone</strong>
                   <span>(720) 555-0142</span>
                 </div>
               </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
+              <div class="ab-contact-detail">
+                <div class="ab-contact-detail-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <div class="contact-detail-text">
+                <div class="ab-contact-detail-text">
                   <strong>Location</strong>
                   <span>Denver, Colorado, USA</span>
                 </div>
               </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">
+              <div class="ab-contact-detail">
+                <div class="ab-contact-detail-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
                 </div>
-                <div class="contact-detail-text">
+                <div class="ab-contact-detail-text">
                   <strong>Response time</strong>
                   <span>Within 24 hours</span>
                 </div>
               </div>
             </div>
 
-            <div style="background:var(--blush-lightest); border-radius:var(--radius-lg); padding:1.25rem 1.5rem;">
-              <h4 style="margin-bottom:0.5rem;">Custom orders</h4>
-              <p style="font-size:0.88rem; color:var(--muted); line-height:1.7;">
+            <div class="ab-contact-note">
+              <h4>Custom orders</h4>
+              <p>
                 Looking for custom scents, bulk orders, or wedding favours? We love working on special requests — just let us know in the message field.
               </p>
             </div>
           </div>
 
-          <!-- Right: form -->
-          <div class="contact-form-wrap">
-            <h3 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:1.5rem; color:var(--bark-deep);">Send us a message</h3>
+          <div class="ab-contact-form-wrap">
+            <h3 class="ab-form-title">Send us a message</h3>
 
             <form
               id="contact-form"
               novalidate
               aria-label="Contact form"
             >
-              <div class="form-row">
-                <div class="form-group">
+              <div class="ab-form-row">
+                <div class="ab-form-group">
                   <label for="first-name">First name <span aria-hidden="true">*</span></label>
                   <input
                     type="text"
@@ -156,9 +138,9 @@
                     aria-describedby="first-name-error"
                     placeholder="Jane"
                   />
-                  <span class="field-error" id="first-name-error" role="alert"></span>
+                  <span class="ab-field-error" id="first-name-error" role="alert"></span>
                 </div>
-                <div class="form-group">
+                <div class="ab-form-group">
                   <label for="last-name">Last name <span aria-hidden="true">*</span></label>
                   <input
                     type="text"
@@ -170,11 +152,11 @@
                     aria-describedby="last-name-error"
                     placeholder="Smith"
                   />
-                  <span class="field-error" id="last-name-error" role="alert"></span>
+                  <span class="ab-field-error" id="last-name-error" role="alert"></span>
                 </div>
               </div>
 
-              <div class="form-group">
+              <div class="ab-form-group">
                 <label for="email">Email address <span aria-hidden="true">*</span></label>
                 <input
                   type="email"
@@ -186,11 +168,11 @@
                   aria-describedby="email-error"
                   placeholder="jane@example.com"
                 />
-                <span class="field-error" id="email-error" role="alert"></span>
+                <span class="ab-field-error" id="email-error" role="alert"></span>
               </div>
 
-              <div class="form-group">
-                <label for="phone">Phone number <span style="color:var(--muted-light); font-weight:300;">(optional)</span></label>
+              <div class="ab-form-group">
+                <label for="phone">Phone number <span class="ab-form-optional">(optional)</span></label>
                 <input
                   type="tel"
                   id="phone"
@@ -199,10 +181,10 @@
                   aria-describedby="phone-error"
                   placeholder="(720) 555-0100"
                 />
-                <span class="field-error" id="phone-error" role="alert"></span>
+                <span class="ab-field-error" id="phone-error" role="alert"></span>
               </div>
 
-              <div class="form-group">
+              <div class="ab-form-group">
                 <label for="inquiry-type">Type of inquiry <span aria-hidden="true">*</span></label>
                 <select
                   id="inquiry-type"
@@ -218,10 +200,10 @@
                   <option value="hair-advice">Hair care advice</option>
                   <option value="other">Other</option>
                 </select>
-                <span class="field-error" id="inquiry-type-error" role="alert"></span>
+                <span class="ab-field-error" id="inquiry-type-error" role="alert"></span>
               </div>
 
-              <div class="form-group">
+              <div class="ab-form-group">
                 <label for="message">Message <span aria-hidden="true">*</span></label>
                 <textarea
                   id="message"
@@ -232,17 +214,17 @@
                   aria-describedby="message-error"
                   placeholder="Tell us what you'd like to know…"
                 ></textarea>
-                <span class="field-error" id="message-error" role="alert"></span>
+                <span class="ab-field-error" id="message-error" role="alert"></span>
               </div>
 
-              <div class="form-group" style="margin-bottom:1.5rem;">
-                <label class="form-checkbox">
+              <div class="ab-form-checkbox-group">
+                <label class="ab-form-checkbox">
                   <input type="checkbox" name="newsletter" value="yes" />
                   <span>Subscribe to our newsletter for new product launches and exclusive offers.</span>
                 </label>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              <button type="submit" class="ab-btn ab-btn-primary ab-btn-block">
                 Send Message
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
@@ -255,20 +237,17 @@
 
   </main>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
+  <footer class="ab-footer" role="contentinfo">
+    <div class="ab-container">
+      <div class="ab-footer-grid">
+        <div class="ab-footer-brand">
+          <a href="index.html" class="ab-logo">
             Amond Beauty
             <span>Natural Hair Care</span>
           </a>
           <p>Handcrafted shampoo and conditioner bars made with love and natural ingredients.</p>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Navigate</h4>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
@@ -276,7 +255,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Products</h4>
           <ul role="list">
             <li><a href="catalog.html?filter=shampoo">Shampoo Bars</a></li>
@@ -284,7 +263,7 @@
             <li><a href="catalog.html">All Products</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Info</h4>
           <ul role="list">
             <li><a href="attributions.html">Attributions</a></li>
@@ -293,9 +272,9 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2025 Amond Beauty. All rights reserved.</p>
-        <nav class="footer-legal" aria-label="Legal links">
+      <div class="ab-footer-bottom">
+        <p class="ab-footer-copy">&copy; 2025 Amond Beauty. All rights reserved.</p>
+        <nav class="ab-footer-legal" aria-label="Legal links">
           <a href="attributions.html">Attributions</a>
           <a href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Demo Video</a>
         </nav>

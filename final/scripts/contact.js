@@ -16,17 +16,14 @@ function initForm() {
 
   const fields = form.querySelectorAll('input[required], select[required], textarea[required]');
 
-  // Save draft to localStorage as user types
   fields.forEach(field => {
     field.addEventListener('input', saveDraft);
   });
 
-  // Real-time validation on blur
   fields.forEach(field => {
     field.addEventListener('blur', () => validateField(field));
   });
 
-  // Submit
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -37,29 +34,23 @@ function initForm() {
 
     if (!valid) {
       showToast('Please fix the errors above.', '⚠');
-      // Focus first invalid field
       form.querySelector('.invalid')?.focus();
       return;
     }
 
-    // Build form data object
     const data = Object.fromEntries(new FormData(form));
     data.timestamp = new Date().toLocaleString('en-US');
 
-    // Save to localStorage for thank-you page
     localStorage.setItem('amondbeauty_submission', JSON.stringify(data));
-
-    // Clear draft
     localStorage.removeItem(DRAFT_KEY);
 
-    // Redirect to thank-you page
     window.location.href = 'thankyou.html';
   });
 }
 
 function validateField(field) {
-  const group = field.closest('.form-group');
-  const errorEl = group?.querySelector('.field-error');
+  const group = field.closest('.ab-form-group');
+  const errorEl = group?.querySelector('.ab-field-error');
   let message = '';
 
   if (field.required && !field.value.trim()) {

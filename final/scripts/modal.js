@@ -6,31 +6,28 @@ let currentProduct = null;
 
 function buildModal() {
   overlay = document.createElement('div');
-  overlay.className = 'modal-overlay';
+  overlay.className = 'ab-modal-overlay';
   overlay.id = 'product-modal';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', 'Product details');
   overlay.innerHTML = `
-    <div class="modal" id="modal-content">
-      <div class="modal-header">
+    <div class="ab-modal" id="modal-content">
+      <div class="ab-modal-header">
         <div></div>
-        <button class="modal-close" id="modal-close-btn" aria-label="Close product details">&#x2715;</button>
+        <button class="ab-modal-close" id="modal-close-btn" aria-label="Close product details">&#x2715;</button>
       </div>
-      <div class="modal-body" id="modal-body"></div>
+      <div class="ab-modal-body" id="modal-body"></div>
     </div>
   `;
   document.body.appendChild(overlay);
 
-  // Close on overlay click
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) closeModal();
   });
 
-  // Close button
   document.getElementById('modal-close-btn').addEventListener('click', closeModal);
 
-  // Keyboard close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
   });
@@ -43,50 +40,50 @@ export function openModal(product) {
   const imgSrc = getProductImageSVG(product);
 
   const ingredientHTML = product.ingredients
-    .map(ing => `<span class="ingredient-tag">${ing}</span>`)
+    .map(ing => `<span class="ab-ingredient-tag">${ing}</span>`)
     .join('');
 
   const stockHTML = product.inStock
-    ? `<button class="btn btn-primary" onclick="window.location='catalog.html'">Shop Now</button>`
-    : `<span class="card-out-of-stock">Currently out of stock</span>`;
+    ? `<a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>`
+    : `<span class="ab-card-out-of-stock">Currently out of stock</span>`;
 
   document.getElementById('modal-body').innerHTML = `
-    <div class="modal-image">
+    <div class="ab-modal-image">
       <img src="${imgSrc}" alt="${product.name}" width="300" height="300"/>
     </div>
-    <div class="modal-info">
-      <p class="modal-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
-      <h2 class="modal-name">${product.name}</h2>
-      <div class="card-rating">
+    <div class="ab-modal-info">
+      <p class="ab-modal-type">${product.type === 'shampoo' ? 'Shampoo Bar' : 'Conditioner Bar'}</p>
+      <h2 class="ab-modal-name">${product.name}</h2>
+      <div class="ab-card-rating">
         ${renderStars(product.rating)}
-        <span class="card-rating-num">${product.rating}</span>
-        <span class="card-rating-count">(${product.reviews} reviews)</span>
+        <span class="ab-card-rating-num">${product.rating}</span>
+        <span class="ab-card-rating-count">(${product.reviews} reviews)</span>
       </div>
-      <p class="modal-desc">${product.description}</p>
-      <div class="modal-meta">
-        <div class="modal-meta-item">
+      <p class="ab-modal-desc">${product.description}</p>
+      <div class="ab-modal-meta">
+        <div class="ab-modal-meta-item">
           <span class="label">Hair type</span>
           <span class="value">${product.hairType}</span>
         </div>
-        <div class="modal-meta-item">
+        <div class="ab-modal-meta-item">
           <span class="label">Scent</span>
           <span class="value">${product.scent}</span>
         </div>
-        <div class="modal-meta-item">
+        <div class="ab-modal-meta-item">
           <span class="label">Weight</span>
           <span class="value">${product.weight}</span>
         </div>
-        <div class="modal-meta-item">
+        <div class="ab-modal-meta-item">
           <span class="label">Status</span>
           <span class="value">${product.inStock ? 'In Stock' : 'Out of Stock'}</span>
         </div>
       </div>
-      <div class="modal-ingredients">
+      <div class="ab-modal-ingredients">
         <h4>Key ingredients</h4>
-        <div class="ingredient-tags">${ingredientHTML}</div>
+        <div class="ab-ingredient-tags">${ingredientHTML}</div>
       </div>
-      <div class="modal-price-row">
-        <span class="modal-price">${formatPrice(product.price)}</span>
+      <div class="ab-modal-price-row">
+        <span class="ab-modal-price">${formatPrice(product.price)}</span>
         ${stockHTML}
       </div>
     </div>
@@ -95,7 +92,6 @@ export function openModal(product) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  // Focus trap: focus close button
   setTimeout(() => document.getElementById('modal-close-btn')?.focus(), 50);
 }
 

@@ -3,10 +3,8 @@ import { initNav } from './nav.js';
 import { fetchProducts, renderProductCard, renderSkeletons, attachCardEvents } from './products.js';
 import { showToast } from './utils.js';
 
-// ── Storage key ────────────────────────────────────
 const PREF_KEY = 'amondbeauty_hair_pref';
 
-// ── Init ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
   initNav();
   await loadFeaturedProducts();
@@ -14,21 +12,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollReveal();
 });
 
-// ── Featured products ──────────────────────────────
 async function loadFeaturedProducts() {
   const container = document.getElementById('featured-products');
   if (!container) return;
 
-  // Show skeletons while loading
   renderSkeletons(4, container);
 
   const products = await fetchProducts();
   if (!products.length) return;
 
-  // Saved preference from localStorage
   const savedPref = localStorage.getItem(PREF_KEY);
 
-  // Filter to relevant products; default to best sellers / highest rated
   let featured;
   if (savedPref && savedPref !== 'all') {
     featured = products
@@ -38,7 +32,6 @@ async function loadFeaturedProducts() {
   } else {
     featured = products.filter(p => p.badge === 'Best Seller' || p.rating >= 4.8).slice(0, 4);
   }
-  // Ensure we always show 4
   if (featured.length < 4) {
     const extras = products.filter(p => !featured.includes(p));
     featured = [...featured, ...extras].slice(0, 4);
@@ -48,7 +41,6 @@ async function loadFeaturedProducts() {
   attachCardEvents(container, products);
 }
 
-// ── Preferences widget (localStorage) ─────────────
 function initPreferences() {
   const widget = document.getElementById('pref-widget');
   if (!widget) return;
@@ -56,7 +48,7 @@ function initPreferences() {
   const saved = localStorage.getItem(PREF_KEY) || 'all';
   setActivePreference(saved);
 
-  widget.querySelectorAll('.pref-btn').forEach(btn => {
+  widget.querySelectorAll('.ab-pref-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const val = btn.dataset.pref;
       localStorage.setItem(PREF_KEY, val);
@@ -75,12 +67,11 @@ function initPreferences() {
 }
 
 function setActivePreference(val) {
-  document.querySelectorAll('.pref-btn').forEach(btn => {
+  document.querySelectorAll('.ab-pref-btn').forEach(btn => {
     btn.classList.toggle('selected', btn.dataset.pref === val);
   });
 }
 
-// ── Scroll reveal ──────────────────────────────────
 function initScrollReveal() {
   const elements = document.querySelectorAll('[data-reveal]');
   if (!elements.length) return;

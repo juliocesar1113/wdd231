@@ -12,7 +12,7 @@
     "description": "A calming blend of lavender and rosemary essential oils that cleanses gently while stimulating the scalp. Rich lather, zero sulfates.",
     "ingredients": ["Coconut Oil", "Castor Oil", "Lavender EO", "Rosemary EO", "Shea Butter"],
     "badge": "Best Seller",
-    "image": "lavender-shampoo",
+    "image": "lavros-shamp",
     "inStock": true
   },
   {
@@ -28,7 +28,7 @@
     "description": "Luxurious argan oil and raw honey deeply nourish brittle strands. Restores shine and manageability from the first wash.",
     "ingredients": ["Argan Oil", "Raw Honey", "Coconut Oil", "Jojoba Oil", "Vitamin E"],
     "badge": "Hydrating",
-    "image": "argan-shampoo",
+    "image": "arganhon-sham",
     "inStock": true
   },
   {
@@ -44,7 +44,7 @@
     "description": "Invigorating peppermint and antibacterial tea tree oil work together to balance oil production and refresh the scalp.",
     "ingredients": ["Tea Tree EO", "Peppermint EO", "Coconut Oil", "Kaolin Clay", "Castor Oil"],
     "badge": "Clarifying",
-    "image": "peppermint-shampoo",
+    "image": "peppermint-shamp",
     "inStock": true
   },
   {
@@ -60,7 +60,7 @@
     "description": "Ultra-gentle formula with chamomile and colloidal oat to soothe irritated scalps. Perfect for frequent washers.",
     "ingredients": ["Chamomile Extract", "Colloidal Oat", "Aloe Vera", "Coconut Oil", "Sunflower Oil"],
     "badge": "Gentle",
-    "image": "chamomile-shampoo",
+    "image": "chaoat-sham",
     "inStock": true
   },
   {
@@ -76,7 +76,7 @@
     "description": "Activated charcoal draws out impurities while cedarwood balances the scalp. Deep cleanse without stripping.",
     "ingredients": ["Activated Charcoal", "Cedarwood EO", "Coconut Oil", "Castor Oil", "Bentonite Clay"],
     "badge": "Detox",
-    "image": "charcoal-shampoo",
+    "image": "charcoal-shamp",
     "inStock": true
   },
   {
@@ -92,7 +92,7 @@
     "description": "Antioxidant-rich hibiscus and rose water protect color while adding brilliant shine. Safe for dyed and highlighted hair.",
     "ingredients": ["Hibiscus Extract", "Rose Water", "Argan Oil", "Coconut Oil", "Vitamin C"],
     "badge": "Color Safe",
-    "image": "rose-shampoo",
+    "image": "rosehib-sham",
     "inStock": true
   },
   {
@@ -108,7 +108,7 @@
     "description": "A tropical blend of vanilla and coconut that smells like paradise and leaves hair soft and manageable.",
     "ingredients": ["Coconut Oil", "Vanilla Extract", "Shea Butter", "Castor Oil", "Aloe Vera"],
     "badge": null,
-    "image": "vanilla-shampoo",
+    "image": "vanillacoco-shamp",
     "inStock": true
   },
   {
@@ -124,7 +124,7 @@
     "description": "Crisp eucalyptus and sage provide an energizing wash experience that awakens the senses and refreshes the scalp.",
     "ingredients": ["Eucalyptus EO", "Sage EO", "Coconut Oil", "Hemp Seed Oil", "Castor Oil"],
     "badge": "New",
-    "image": "eucalyptus-shampoo",
+    "image": "eucal-shamp",
     "inStock": true
   },
   {
@@ -140,7 +140,7 @@
     "description": "Ultra-rich shea butter and mango seed butter melt into strands for intense moisture and frizz control that lasts all day.",
     "ingredients": ["Shea Butter", "Mango Butter", "Cetyl Alcohol", "Behentrimonium Methosulfate", "Argan Oil"],
     "badge": "Best Seller",
-    "image": "shea-conditioner",
+    "image": "shmango-con",
     "inStock": true
   },
   {
@@ -156,7 +156,7 @@
     "description": "Lightweight coconut oil and cooling aloe vera hydrate without weighing hair down. Leaves curls defined and bouncy.",
     "ingredients": ["Coconut Oil", "Aloe Vera Gel", "Shea Butter", "Panthenol", "Cetyl Alcohol"],
     "badge": "Lightweight",
-    "image": "coconut-conditioner",
+    "image": "coconutaloe-con",
     "inStock": true
   },
   {
@@ -172,7 +172,7 @@
     "description": "Liquid silk proteins and argan oil add volume and shine without heaviness. A dream for fine hair that needs lift.",
     "ingredients": ["Argan Oil", "Hydrolyzed Silk", "Cetearyl Alcohol", "Behentrimonium Methosulfate", "Vitamin E"],
     "badge": "Volumizing",
-    "image": "argan-conditioner",
+    "image": "argan-con",
     "inStock": true
   },
   {
@@ -188,7 +188,7 @@
     "description": "A balancing conditioner that pairs perfectly with our Lavender Shampoo Bar. Jojoba mimics scalp's natural oils.",
     "ingredients": ["Jojoba Oil", "Lavender EO", "Shea Butter", "Cetyl Alcohol", "Aloe Vera"],
     "badge": "Pairs Well",
-    "image": "lavender-conditioner",
+    "image": "lavjojo-cond",
     "inStock": true
   },
   {
@@ -204,7 +204,7 @@
     "description": "Avocado oil penetrates deep to repair damage, while green tea antioxidants protect from future stress.",
     "ingredients": ["Avocado Oil", "Green Tea Extract", "Keratin", "Shea Butter", "Cetearyl Alcohol"],
     "badge": "Repairing",
-    "image": "avocado-conditioner",
+    "image": "avo-cond",
     "inStock": true
   },
   {
@@ -220,7 +220,7 @@
     "description": "Thick castor oil seals in moisture and color while rose extract adds luminosity to dull, processed hair.",
     "ingredients": ["Castor Oil", "Rose Hip Oil", "Cetyl Alcohol", "Behentrimonium Methosulfate", "Panthenol"],
     "badge": "Color Safe",
-    "image": "rose-conditioner",
+    "image": "rosecas-cond",
     "inStock": true
   },
   {
@@ -236,7 +236,7 @@
     "description": "Potassium-rich banana extract and raw honey seal the cuticle and define natural curl patterns beautifully.",
     "ingredients": ["Banana Extract", "Raw Honey", "Coconut Oil", "Shea Butter", "Cetyl Alcohol"],
     "badge": "Curl Defining",
-    "image": "banana-conditioner",
+    "image": "bananahon-cond",
     "inStock": true
   },
   {
@@ -252,7 +252,7 @@
     "description": "Soothing calendula and colloidal oat calm scalp sensitivity while providing light, daily conditioning.",
     "ingredients": ["Calendula Extract", "Colloidal Oat", "Sunflower Oil", "Cetyl Alcohol", "Aloe Vera"],
     "badge": "Soothing",
-    "image": "oat-conditioner",
+    "image": "oat-cond",
     "inStock": true
   },
   {
@@ -268,7 +268,7 @@
     "description": "A grounding blend of patchouli and ylang ylang that balances sebum and leaves an irresistible lingering scent.",
     "ingredients": ["Patchouli EO", "Ylang Ylang EO", "Coconut Oil", "Castor Oil", "Arrowroot Powder"],
     "badge": "New",
-    "image": "patchouli-shampoo",
+    "image": "patch-shamp",
     "inStock": false
   },
   {
@@ -284,7 +284,7 @@
     "description": "Bright lemon and warming ginger awaken and volumize. A morning ritual that wakes you up and lifts your roots.",
     "ingredients": ["Lemon EO", "Ginger Extract", "Coconut Oil", "Kaolin Clay", "Castor Oil"],
     "badge": null,
-    "image": "lemon-shampoo",
+    "image": "lemon-shamp",
     "inStock": true
   },
   {
@@ -300,7 +300,7 @@
     "description": "Tropical fruit enzymes gently exfoliate the scalp while mango butter locks in moisture for brilliant shine.",
     "ingredients": ["Mango Butter", "Papaya Extract", "Coconut Oil", "Shea Butter", "Jojoba Oil"],
     "badge": null,
-    "image": "mango-shampoo",
+    "image": "mangopapa-shamp",
     "inStock": true
   },
   {
@@ -316,7 +316,7 @@
     "description": "Sweet almond oil and neroli blossom create the most elegant conditioner bar in our lineup. A signature Amond Beauty scent.",
     "ingredients": ["Sweet Almond Oil", "Neroli EO", "Shea Butter", "Cetearyl Alcohol", "Vitamin E"],
     "badge": "Signature",
-    "image": "neroli-conditioner",
+    "image": "neroli-cond",
     "inStock": true
   }
 ]

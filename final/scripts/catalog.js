@@ -7,7 +7,6 @@ const SORT_KEY = 'amondbeauty_sort_pref';
 
 let allProducts = [];
 let activeFilter = 'all';
-let activeSortEl = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   initNav();
@@ -23,11 +22,10 @@ async function initCatalog() {
 
   allProducts = await fetchProducts();
   if (!allProducts.length) {
-    grid.innerHTML = '<p style="color:var(--muted);grid-column:1/-1;text-align:center;padding:3rem 0;">No products found. Please try again later.</p>';
+    grid.innerHTML = '<div class="ab-empty-state"><p>No products found. Please try again later.</p></div>';
     return;
   }
 
-  // Restore saved sort
   const savedSort = localStorage.getItem(SORT_KEY) || 'default';
   const sortEl = document.getElementById('sort-select');
   if (sortEl) {
@@ -38,17 +36,19 @@ async function initCatalog() {
     });
   }
 
-  // Filter buttons
-  document.querySelectorAll('.filter-btn').forEach(btn => {
+  document.querySelectorAll('.ab-filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       activeFilter = btn.dataset.filter;
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.ab-filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       renderCatalog();
     });
   });
 
-  // Search
   const searchInput = document.getElementById('search-input');
   if (searchInput) {
     searchInput.addEventListener('input', debounce(renderCatalog, 250));
@@ -63,8 +63,10 @@ function readURLFilter() {
   const filter = params.get('filter');
   if (filter && ['shampoo', 'conditioner'].includes(filter)) {
     activeFilter = filter;
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.filter === filter);
+    document.querySelectorAll('.ab-filter-btn').forEach(btn => {
+      const match = btn.dataset.filter === filter;
+      btn.classList.toggle('active', match);
+      btn.setAttribute('aria-pressed', String(match));
     });
     renderCatalog();
   }
@@ -80,7 +82,6 @@ function renderCatalog() {
   const query = searchInput?.value.trim().toLowerCase() || '';
   const sortVal = sortEl?.value || 'default';
 
-  // Filter
   let filtered = allProducts.filter(p => {
     const matchType = activeFilter === 'all' || p.type === activeFilter;
     const matchSearch = !query
@@ -91,13 +92,11 @@ function renderCatalog() {
     return matchType && matchSearch;
   });
 
-  // Sort using array method
   filtered = [...filtered].sort((a, b) => {
     if (sortVal === 'price-asc')  return a.price - b.price;
     if (sortVal === 'price-desc') return b.price - a.price;
     if (sortVal === 'rating')     return b.rating - a.rating;
     if (sortVal === 'name')       return a.name.localeCompare(b.name);
-    // default: best sellers first, then by rating
     const bsA = a.badge === 'Best Seller' ? 0 : 1;
     const bsB = b.badge === 'Best Seller' ? 0 : 1;
     return bsA - bsB || b.rating - a.rating;
@@ -109,17 +108,17 @@ function renderCatalog() {
 
   if (!filtered.length) {
     grid.innerHTML = `
-      <div style="grid-column:1/-1; text-align:center; padding:4rem 0;">
-        <p style="font-size:1.1rem; color:var(--muted); margin-bottom:1rem;">No products match your search.</p>
-        <button class="btn btn-ghost" onclick="document.getElementById('search-input').value=''; window.catalog?.renderCatalog()">Clear search</button>
+      <div class="ab-empty-state">
+        <p>No products match your search.</p>
+        <button class="ab-btn ab-btn-ghost" id="clear-search-btn">Clear search</button>
       </div>`;
+    document.getElementById('clear-search-btn')?.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      renderCatalog();
+    });
     return;
   }
 
   grid.innerHTML = filtered.map(renderProductCard).join('');
-  // Re-attach events after re-render
   attachCardEvents(grid, allProducts);
 }
-
-// Expose for inline clear button
-window.catalog = { renderCatalog };

@@ -12,83 +12,78 @@
   <meta property="og:description" content="20+ natural hair care bars for every hair type. Sulfate-free, plastic-free, handcrafted." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://amondbeauty.com/catalog.html" />
-  <meta property="og:image" content="images/og-catalog.svg" />
+  <meta property="og:image" content="https://amondbeauty.com/images/og-catalog.svg" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="stylesheet" href="styles/main.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       HEADER / NAV
-  ══════════════════════════════════════════ -->
-  <header class="site-header" role="banner">
-    <div class="container">
-      <nav class="nav-inner" aria-label="Main navigation">
-        <a href="index.html" class="nav-logo" aria-label="Amond Beauty home">
+  <header class="ab-header" role="banner">
+    <div class="ab-container">
+      <nav class="ab-nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="ab-logo" aria-label="Amond Beauty home">
           Amond Beauty
           <span>Natural Hair Care</span>
         </a>
-        <ul class="nav-links" role="list">
+        <ul class="ab-nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="catalog.html" class="nav-cta">Shop Now</a></li>
+          <li><a href="catalog.html" class="ab-nav-cta">Shop Now</a></li>
         </ul>
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button class="ab-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <nav class="ab-mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="catalog.html">Catalog</a>
     <a href="contact.html">Contact</a>
-    <a href="catalog.html" class="btn btn-primary" style="margin-top:1rem;">Shop Now</a>
+    <a href="catalog.html" class="ab-btn ab-btn-primary">Shop Now</a>
   </nav>
 
   <main id="main-content">
 
-    <!-- ══════════════════════════════════════════
-         PAGE HERO
-    ══════════════════════════════════════════ -->
-    <section class="page-hero" aria-labelledby="catalog-heading">
-      <div class="container">
+    <section class="ab-page-hero" aria-labelledby="catalog-heading">
+      <div class="ab-container">
         <h4>Our collection</h4>
         <h1 id="catalog-heading">Shop All Bars</h1>
         <p>Every bar handcrafted with natural ingredients for your specific hair needs.</p>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         CATALOG SECTION
-    ══════════════════════════════════════════ -->
-    <section class="section-pad-sm" aria-label="Product catalog">
-      <div class="container">
+    <section class="ab-section-sm" aria-label="Product catalog">
+      <div class="ab-container">
 
-        <!-- Search -->
-        <div style="margin-bottom:1.5rem;">
+        <div class="ab-search-wrap">
           <label for="search-input" class="sr-only">Search products</label>
           <input
             type="search"
             id="search-input"
+            class="ab-search-input"
             placeholder="Search by name, hair type, scent…"
             aria-label="Search products"
-            style="width:100%; max-width:420px; background:var(--warm-white); border:1px solid var(--border-mid); border-radius:40px; padding:0.65rem 1.25rem; font-size:0.9rem; color:var(--ink); outline:none; font-family:var(--font-body);"
           />
         </div>
 
-        <!-- Filter + Sort bar -->
-        <div class="filter-bar" role="group" aria-label="Filter and sort products">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" data-filter="shampoo" aria-pressed="false">Shampoo Bars</button>
-          <button class="filter-btn" data-filter="conditioner" aria-pressed="false">Conditioner Bars</button>
+        <div class="ab-filter-bar" role="group" aria-label="Filter and sort products">
+          <button class="ab-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="ab-filter-btn" data-filter="shampoo" aria-pressed="false">Shampoo Bars</button>
+          <button class="ab-filter-btn" data-filter="conditioner" aria-pressed="false">Conditioner Bars</button>
 
-          <div class="sort-wrap">
+          <div class="ab-sort-wrap">
             <label for="sort-select">Sort by</label>
-            <select id="sort-select" aria-label="Sort products">
+            <select id="sort-select" class="ab-sort-select" aria-label="Sort products">
               <option value="default">Featured</option>
               <option value="rating">Top Rated</option>
               <option value="price-asc">Price: Low to High</option>
@@ -98,12 +93,10 @@
           </div>
         </div>
 
-        <!-- Count -->
-        <p class="products-count" id="products-count" aria-live="polite"></p>
+        <p class="ab-products-count" id="products-count" aria-live="polite"></p>
 
-        <!-- Grid populated by JS -->
         <div
-          class="products-grid"
+          class="ab-products-grid"
           id="catalog-grid"
           aria-live="polite"
           aria-label="Product grid"
@@ -114,20 +107,17 @@
 
   </main>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
+  <footer class="ab-footer" role="contentinfo">
+    <div class="ab-container">
+      <div class="ab-footer-grid">
+        <div class="ab-footer-brand">
+          <a href="index.html" class="ab-logo">
             Amond Beauty
             <span>Natural Hair Care</span>
           </a>
           <p>Handcrafted shampoo and conditioner bars made with love and natural ingredients.</p>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Navigate</h4>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
@@ -135,7 +125,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Products</h4>
           <ul role="list">
             <li><a href="catalog.html?filter=shampoo">Shampoo Bars</a></li>
@@ -143,7 +133,7 @@
             <li><a href="catalog.html">All Products</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="ab-footer-col">
           <h4>Info</h4>
           <ul role="list">
             <li><a href="attributions.html">Attributions</a></li>
@@ -152,9 +142,9 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2025 Amond Beauty. All rights reserved.</p>
-        <nav class="footer-legal" aria-label="Legal links">
+      <div class="ab-footer-bottom">
+        <p class="ab-footer-copy">&copy; 2025 Amond Beauty. All rights reserved.</p>
+        <nav class="ab-footer-legal" aria-label="Legal links">
           <a href="attributions.html">Attributions</a>
           <a href="https://youtu.be/VIDEO_ID" target="_blank" rel="noopener">Demo Video</a>
         </nav>
